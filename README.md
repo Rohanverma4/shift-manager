@@ -267,3 +267,4 @@ curl -X POST http://localhost:3002/settings \
   the app to run.
 - `frontend/src/assets/hero.png`, `react.svg`, and `vite.svg` are leftover Vite
   template assets and can be removed.
+# shift-manager

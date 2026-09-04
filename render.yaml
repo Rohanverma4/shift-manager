@@ -9,8 +9,9 @@ services:
     plan: free
     rootDir: backend
     buildCommand: |
-      cd ../frontend && npm install && npm run build
-      cd ../backend && cp -r ../frontend/dist ./dist
+      cd ../frontend && npm install --include=dev && npm run build && \
+      cp -r dist ../backend/dist && \
+      cd ../backend && npm install --omit=dev
     startCommand: node src/server.js
     envVars:
       - key: NODE_ENV
@@ -23,8 +24,6 @@ services:
           property: connectionString
       - key: PORT
         value: 3000
-      - key: ENGINES_NODE_VERSION
-        value: "22"
 
 databases:
   - name: office-shift-db

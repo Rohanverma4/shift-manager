@@ -269,3 +269,4 @@ curl -X POST http://localhost:3002/settings \
   template assets and can be removed.
 # shift-manager
 # shift-manager
+# shift-manager
